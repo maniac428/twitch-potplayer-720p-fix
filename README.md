@@ -1,6 +1,6 @@
 # Twitch PotPlayer 720p Fix - Source Quality Launcher
 
-Languages: [한국어](#한국어) | [English](#english) | [Русский](#русский)
+Languages: [한국어](#한국어) | [English](#english)
 
 Related project:
 
@@ -118,69 +118,11 @@ open-twitch-source.cmd aceu
 - It does not use your Twitch cookies or auth-token.
 - "No ads" means opening Twitch directly in PotPlayer may avoid web-player ad screens or UI in some setups. It is not a guaranteed permanent Twitch ad blocker.
 
-## Русский
-
-**Twitch PotPlayer 720p Fix** - это простой Windows launcher для открытия Twitch-стримов в PotPlayer в исходном качестве/source quality.
-
-Настройка максимально простая: скачайте ZIP, запустите `open-twitch-source.cmd` и вставьте имя канала Twitch или ссылку.
-
-### Что нужно
-
-| Компонент | Ссылка |
-| --- | --- |
-| Последний ZIP release | [GitHub Releases](https://github.com/maniac428/twitch-potplayer-720p-fix/releases/latest) |
-| PotPlayer 64-bit | [PotPlayerSetup64.exe](https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe) |
-| Streamlink | [Streamlink Windows release](https://github.com/streamlink/windows-builds/releases/latest) |
-
-Дополнительно:
-
-| Компонент | Ссылка |
-| --- | --- |
-| LAV Filters | [GitHub releases](https://github.com/Nevcairiel/LAVFilters/releases/latest) |
-| Bluesky Frame Rate Converter | [bluesky-soft.com](https://bluesky-soft.com/en/BlueskyFRC.html) |
-
-Не скачивайте установщики со случайных зеркал. Практичный вариант: официальный PotPlayer 64-bit + официальный Streamlink + ZIP этого репозитория.
-
-### Использование
-
-1. Скачайте последний ZIP release.
-2. Распакуйте архив.
-3. Запустите `open-twitch-source.cmd`.
-4. Введите имя канала Twitch или ссылку.
-
-Пример:
-
-```cmd
-open-twitch-source.cmd "https://www.twitch.tv/aceu"
-```
-
-Можно указать только имя канала:
-
-```cmd
-open-twitch-source.cmd aceu
-```
-
-### Как это работает
-
-1. Launcher читает имя Twitch-канала.
-2. Запрашивает Twitch HLS playlist.
-3. Выбирает вариант `IVS-VARIANT-SOURCE="source"`, если он доступен.
-4. Streamlink передает поток в PotPlayer.
-
-### Важно
-
-- Если сам стример вещает только в 720p, source тоже будет 720p.
-- Инструмент зависит от публичных proxy endpoints, поэтому при сбоях proxy воспроизведение может не работать.
-- Twitch cookies и auth-token не используются.
-- "Без рекламы" означает, что открытие напрямую в PotPlayer иногда помогает избежать рекламного экрана или web-player UI. Это не гарантированный постоянный ad blocker для Twitch.
-
-## Search Keywords / 검색 키워드 / Ключевые слова
+## Search Keywords / 검색 키워드
 
 한국어: 트위치 팟플레이어 720p 해결, 트위치 팟플레이어 1080p, 트위치 팟플레이어 원본화질, 트위치 팟플레이어 광고 없음, 팟플레이어 트위치 연결, 트위치 720p 제한, 한국 트위치 1080p 안됨, 러시아 트위치 1080p 안됨, Streamlink Twitch PotPlayer.
 
 English: Twitch PotPlayer 720p fix, Twitch PotPlayer 1080p, Twitch PotPlayer source quality, Twitch PotPlayer no ads, PotPlayer Twitch original quality, Streamlink Twitch PotPlayer, Korea Twitch 720p, Russia Twitch 720p.
-
-Русский: Twitch PotPlayer 720p ограничение, Twitch PotPlayer 1080p, Twitch PotPlayer исходное качество, Twitch PotPlayer без рекламы, PotPlayer Twitch source quality, Streamlink Twitch PotPlayer, Twitch 1080p не работает.
 
 ## Credits
 

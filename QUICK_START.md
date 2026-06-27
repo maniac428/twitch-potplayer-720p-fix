@@ -25,16 +25,3 @@ open-twitch-source.cmd "https://www.twitch.tv/aceu"
 ```
 
 Do not download only one `.cmd` file. Keep the full folder, including the `scripts` directory.
-
-## Русский
-
-1. Установите PotPlayer 64-bit и Streamlink.
-2. Скачайте и распакуйте последний release ZIP.
-3. Запустите `open-twitch-source.cmd`.
-4. Вставьте имя Twitch-канала или ссылку.
-
-```cmd
-open-twitch-source.cmd "https://www.twitch.tv/aceu"
-```
-
-Не скачивайте только один `.cmd` файл. Используйте всю папку целиком, включая папку `scripts`.
