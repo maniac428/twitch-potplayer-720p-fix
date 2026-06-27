@@ -1,10 +1,10 @@
-# Twitch PotPlayer Source Menu
+# Twitch PotPlayer 720p Fix - Source Quality Menu
 
 Languages: [English](#english) | [한국어](#한국어) | [Русский](#русский)
 
 ## English
 
-**Twitch PotPlayer Source Menu** opens Twitch livestreams in PotPlayer at source/original quality from a Tampermonkey right-click menu.
+**Twitch PotPlayer 720p Fix - Source Quality Menu** opens Twitch livestreams in PotPlayer at source/original quality from a Tampermonkey right-click menu.
 
 Some PotPlayer setups or Chrome extensions open Twitch by passing the normal Twitch page URL to PotPlayer. Depending on region, codec handling, or PotPlayer's internal HLS source, this can get stuck at 720p. This project takes a different route: it requests the Twitch HLS playlist, selects the `IVS-VARIANT-SOURCE="source"` variant, and hands it to PotPlayer through Streamlink.
 
@@ -93,7 +93,7 @@ If you double-click `open-twitch-source.cmd`, it will ask you to paste a Twitch 
 
 ## 한국어
 
-**Twitch PotPlayer Source Menu**는 Twitch 방송을 PotPlayer에서 원본화질로 열기 위한 Tampermonkey 우클릭 메뉴와 Windows 실행 도구입니다.
+**Twitch PotPlayer 720p Fix - Source Quality Menu**는 Twitch 방송을 PotPlayer에서 원본화질로 열기 위한 Tampermonkey 우클릭 메뉴와 Windows 실행 도구입니다.
 
 한국/러시아 등 일부 환경에서는 기존 Chrome 확장 프로그램이나 PotPlayer의 기본 Twitch 링크 열기가 720p까지만 잡히는 경우가 있습니다. 이 도구는 Twitch 페이지 주소를 그대로 넘기지 않고, ReYohoho 방식의 프록시 요청으로 Twitch HLS playlist에서 `IVS-VARIANT-SOURCE="source"` 항목을 직접 선택한 뒤 Streamlink를 통해 PotPlayer로 넘깁니다.
 
@@ -182,7 +182,7 @@ open-twitch-source.cmd aceu
 
 ## Русский
 
-**Twitch PotPlayer Source Menu** - это меню правой кнопки мыши Tampermonkey и Windows launcher, которые открывают Twitch-стримы в PotPlayer в исходном качестве.
+**Twitch PotPlayer 720p Fix - Source Quality Menu** - это меню правой кнопки мыши Tampermonkey и Windows launcher, которые открывают Twitch-стримы в PotPlayer в исходном качестве.
 
 В некоторых регионах и конфигурациях обычное открытие Twitch-ссылки в PotPlayer или через расширение Chrome может давать только 720p. Этот проект не передает обычную страницу Twitch напрямую в PotPlayer. Вместо этого он получает HLS playlist, выбирает вариант `IVS-VARIANT-SOURCE="source"` и открывает его через Streamlink в PotPlayer.
 
