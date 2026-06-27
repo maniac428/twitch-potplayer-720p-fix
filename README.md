@@ -6,6 +6,33 @@
 
 Keywords: Twitch PotPlayer source quality, Twitch 720p fix, PotPlayer Twitch 1080p, Twitch 720p 제한, 트위치 팟플레이어 원본화질, Tampermonkey Twitch PotPlayer, Streamlink Twitch, Bluesky Frame Rate Converter, Twitch PotPlayer 720p ограничение, исходное качество Twitch PotPlayer.
 
+## Required Downloads / 필수 다운로드 / Обязательные загрузки
+
+Download the full repository first. `install-protocol.cmd` needs the `scripts` folder, so downloading only the `.cmd` file is not enough.
+
+먼저 저장소 전체를 받으세요. `install-protocol.cmd`는 `scripts` 폴더 안의 PowerShell 파일을 같이 사용하므로 `.cmd` 파일 하나만 받으면 동작하지 않습니다.
+
+Сначала скачайте весь репозиторий. `install-protocol.cmd` использует файлы из папки `scripts`, поэтому одного `.cmd` файла недостаточно.
+
+| File / Tool | Download link |
+| --- | --- |
+| Full repository ZIP / 전체 ZIP / Полный ZIP | [Download main.zip](https://github.com/maniac428/twitch-potplayer-source-menu/archive/refs/heads/main.zip) |
+| Tampermonkey userscript / 유저스크립트 / Userscript | [twitch-potplayer-source-menu.user.js](https://raw.githubusercontent.com/maniac428/twitch-potplayer-source-menu/main/twitch-potplayer-source-menu.user.js) |
+| PotPlayer official page / 팟플레이어 공식 / Официальный PotPlayer | [potplayer.tv](https://potplayer.tv/) |
+| PotPlayer 64-bit direct, recommended / 64비트 권장 / Рекомендуется 64-bit | [PotPlayerSetup64.exe](https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe) |
+| Streamlink official install / Streamlink 공식 설치 / Официальная установка | [streamlink.github.io/install.html](https://streamlink.github.io/install.html) |
+| Streamlink Windows release / Windows용 Streamlink / Streamlink для Windows | [GitHub latest release](https://github.com/streamlink/windows-builds/releases/latest) |
+| Tampermonkey for Chrome / 크롬용 Tampermonkey / Tampermonkey для Chrome | [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) |
+
+Optional for frame interpolation:
+
+| Tool | Download link |
+| --- | --- |
+| LAV Filters | [GitHub releases](https://github.com/Nevcairiel/LAVFilters/releases/latest) |
+| Bluesky Frame Rate Converter | [bluesky-soft.com](https://bluesky-soft.com/en/BlueskyFRC.html) |
+
+Do not download PotPlayer, Streamlink, or Tampermonkey from random mirror sites. For this project, the safest sweet spot is: official PotPlayer 64-bit + official Streamlink + Tampermonkey from Chrome Web Store + this repository ZIP.
+
 ## 한국어
 
 **Twitch PotPlayer Source Menu**는 Twitch 방송을 PotPlayer에서 원본화질로 열기 위한 작은 Tampermonkey 스크립트와 Windows 실행 도구입니다.
@@ -33,7 +60,7 @@ Keywords: Twitch PotPlayer source quality, Twitch 720p fix, PotPlayer Twitch 108
 필수:
 
 - Windows
-- PotPlayer
+- PotPlayer 64-bit 권장
 - Streamlink
 - Chrome 또는 Chromium 계열 브라우저
 - Tampermonkey
@@ -51,6 +78,7 @@ Keywords: Twitch PotPlayer source quality, Twitch 720p fix, PotPlayer Twitch 108
 - 공개 프록시가 막히면 실행이 실패할 수 있습니다.
 - 이 스크립트는 Twitch 로그인 쿠키나 auth-token을 사용하지 않습니다.
 - 기존 `PotPlayer YouTube Shortcut` 확장의 `Open link in PotPlayer` 메뉴는 Twitch에서 720p로 빠질 수 있습니다. 이 저장소의 Tampermonkey 메뉴를 사용하세요.
+- 32비트 PotPlayer는 오래된 32비트 전용 필터가 꼭 필요할 때만 고려하세요. 이 프로젝트의 기본 경로는 64비트 PotPlayer입니다.
 
 ## Русский
 
@@ -79,7 +107,7 @@ Keywords: Twitch PotPlayer source quality, Twitch 720p fix, PotPlayer Twitch 108
 Требуется:
 
 - Windows
-- PotPlayer
+- PotPlayer 64-bit рекомендуется
 - Streamlink
 - Chrome или Chromium-браузер
 - Tampermonkey
@@ -97,6 +125,7 @@ Keywords: Twitch PotPlayer source quality, Twitch 720p fix, PotPlayer Twitch 108
 - Публичные proxy-серверы могут временно не работать.
 - Скрипт не использует ваши Twitch cookies или auth-token.
 - Меню обычных расширений PotPlayer может по-прежнему открывать Twitch старым способом. Используйте меню Tampermonkey из этого проекта.
+- 32-bit PotPlayer имеет смысл только для старых 32-bit фильтров. Основной путь этого проекта рассчитан на PotPlayer 64-bit.
 
 ## English
 
@@ -125,7 +154,7 @@ Some PotPlayer setups or Chrome extensions open Twitch by passing the normal Twi
 Requirements:
 
 - Windows
-- PotPlayer
+- PotPlayer 64-bit recommended
 - Streamlink
 - Chrome or another Chromium browser
 - Tampermonkey
@@ -143,6 +172,7 @@ Steps:
 - Public proxy endpoints can break or become unavailable.
 - This project does not use your Twitch cookies or auth-token.
 - Generic PotPlayer browser-extension link menus may still open Twitch the old way. Use this Tampermonkey menu for the source-quality route.
+- Use 32-bit PotPlayer only if you depend on old 32-bit-only filters. This project is designed around PotPlayer 64-bit.
 
 ## Credits
 

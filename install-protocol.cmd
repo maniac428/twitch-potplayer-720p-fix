@@ -39,10 +39,10 @@ if exist "%ProgramFiles(x86)%\DAUM\PotPlayer\PotPlayerMini64.exe" set "POTPLAYER
 if exist "%ProgramFiles(x86)%\DAUM\PotPlayer\PotPlayer64.exe" set "POTPLAYER_FOUND=1"
 
 if defined POTPLAYER_FOUND (
-  echo [OK] PotPlayer found.
+  echo [OK] PotPlayer 64-bit found.
 ) else (
-  echo [MISSING] PotPlayer was not found.
-  echo           Install PotPlayer first.
+  echo [MISSING] PotPlayer 64-bit was not found.
+  echo           Install PotPlayer 64-bit first.
 )
 
 set "STREAMLINK_FOUND="
