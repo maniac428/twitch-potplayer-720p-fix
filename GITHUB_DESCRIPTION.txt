@@ -1,1 +1,1 @@
-Twitch PotPlayer 720p fix: open Twitch streams in PotPlayer at source/original quality via Tampermonkey, Streamlink, and a Windows twitchpotplayer:// protocol handler.
+Twitch 팟플레이어 720p/1080p 원본화질 연결 도우미: 한국/러시아 1080p 안됨, 광고/웹 플레이어 없이 PotPlayer로 열기.
