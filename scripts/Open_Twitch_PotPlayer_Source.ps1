@@ -122,6 +122,22 @@ function Get-TextFromWebResponse {
   return [string]$Response.Content
 }
 
+function Get-Utf8TextFromWebResponse {
+  param($Response)
+
+  if ($Response.RawContentStream) {
+    $Response.RawContentStream.Position = 0
+    $reader = New-Object System.IO.StreamReader($Response.RawContentStream, [System.Text.Encoding]::UTF8, $true)
+    try {
+      return $reader.ReadToEnd()
+    } finally {
+      $reader.Dispose()
+    }
+  }
+
+  return Get-TextFromWebResponse $Response
+}
+
 function Normalize-ProxyUrl {
   param([string]$Proxy)
 
@@ -360,13 +376,16 @@ function Get-TwitchPlayerTitle {
     }
     $body = $bodyObject | ConvertTo-Json -Depth 20 -Compress
 
-    $response = Invoke-RestMethod `
+    $webResponse = Invoke-WebRequest `
       -Method Post `
       -Uri ($Proxy + "https://gql.twitch.tv/gql") `
       -Headers $Headers `
       -Body $body `
       -ContentType "application/json" `
+      -UseBasicParsing `
       -TimeoutSec $TimeoutSec
+
+    $response = Get-Utf8TextFromWebResponse $webResponse | ConvertFrom-Json
 
     $user = $response.data.user
     if (-not $user) {
